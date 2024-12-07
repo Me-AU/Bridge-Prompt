@@ -4,7 +4,7 @@ import torch.nn as nn
 from datasets import Breakfast, GTEA, SALADS
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-import wandb
+# import wandb
 import argparse
 import shutil
 from pathlib import Path
@@ -19,11 +19,11 @@ from utils.tools import *
 from utils.text_prompt import *
 from utils.saving import *
 
-
+#Integrate 
 class TextCLIP(nn.Module):
     def __init__(self, model):
         super(TextCLIP, self).__init__()
-        self.model = model
+        self.model = model#
 
     def forward(self, text):
         return self.model.encode_text(text)
